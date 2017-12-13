@@ -30,14 +30,25 @@ public class ModelPlayerOverride extends ModelPlayerBase {
         final boolean isOurPlayer = nameEntity.getEntityId() == Minecraft.getMinecraft().thePlayer.getEntityId();
         if (isOurPlayer && InputEvent.prevDabbingHeld > 0) {
             if (!applied && !failed && AutoGG.getInstance().isChroma() && InputEvent.dabbing) {
-                try {
+                 try {
                     EntityRenderer entityRenderer = Minecraft.getMinecraft().entityRenderer;
-                    if (!entityRenderer.isShaderActive())
-                        entityRenderer.loadShader(new ResourceLocation("shaders/post/wobble2.json"));
+                    if (!entityRenderer.isShaderActive()) {
+                        try {
+                            Method loadShader = ReflectionHelper.findMethod(EntityRenderer.class, entityRenderer,
+                                    new String[]{"func_175069_a", "loadShader"},ResourceLocation.class);
+                            loadShader.invoke(entityRenderer, new ResourceLocation("shaders/post/wobble2.json"));
+                        } catch (IllegalAccessException | InvocationTargetException e) {
+                            e.printStackTrace();
+                            failed = true;
+                            Sk1erMod.getInstance().sendMessage("Your forge version is not compatible with the Chroma Dab setting. Please contact Sk1er (@Sk1er_ on Twitter). (1)");
 
-                } catch (Exception ignored) {
+                        }
+                    }
+
+                } catch (Throwable ignored) {
+                    ignored.printStackTrace();
                     failed = true;
-                    Sk1erMod.getInstance().sendMessage("Your forge version is not compatible with the Chroma Dab setting");
+                    Sk1erMod.getInstance().sendMessage("Your forge version is not compatible with the Chroma Dab setting. Please contact Sk1er (@Sk1er_ on Twitter). (2)");
                 }
                 applied = true;
             }
