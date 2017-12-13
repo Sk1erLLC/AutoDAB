@@ -32,6 +32,7 @@ public class AutoGG {
     private List<String> triggers;
     private ConfigUtil util;
     private boolean running;
+    private boolean chroma = true;
     private boolean f5 = true;
 
     public AutoGG(File config) {
@@ -63,6 +64,14 @@ public class AutoGG {
 
     public void setF5(boolean f5) {
         this.f5 = f5;
+    }
+
+    public void toggleChroma(boolean newState) {
+        this.chroma = newState;
+    }
+
+    public boolean isChroma() {
+        return chroma;
     }
 
     @SubscribeEvent

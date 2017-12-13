@@ -26,10 +26,7 @@ public class GGCommand extends CommandBase {
         }
         final String s = args[0];
         switch (s) {
-            case "meme": {
 
-                break;
-            }
             case "toggle":
             case "t": {
                 AutoGG.getInstance().setToggled();
@@ -44,7 +41,13 @@ public class GGCommand extends CommandBase {
                 AutoGG.getInstance().getUtil().save();
                 break;
             }
-
+            case "color":
+            case "chroma": {
+                AutoGG.getInstance().toggleChroma(!AutoGG.getInstance().isChroma());
+                this.showMessage(EnumChatFormatting.GRAY + "AutoDAB: Set Chroma to " + (AutoGG.getInstance().isChroma() ? (EnumChatFormatting.GREEN + "On") : (EnumChatFormatting.RED + "Off")), sender);
+                AutoGG.getInstance().getUtil().save();
+                break;
+            }
             case "length":
             case "time": {
                 if (args.length == 2) {

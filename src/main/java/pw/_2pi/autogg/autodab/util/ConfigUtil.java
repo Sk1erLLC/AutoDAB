@@ -30,6 +30,8 @@ public class ConfigUtil {
                 AutoGG.getInstance().setLength(asJsonObject.get("length").getAsInt());
                 AutoGG.getInstance().setF5(asJsonObject.get("f5").getAsBoolean());
                 AutoGG.getInstance().setToggled(asJsonObject.get("toggled").getAsBoolean());
+                AutoGG.getInstance().toggleChroma(asJsonObject.get("chroma").getAsBoolean());
+
             } catch (Exception e) {
 
             }
@@ -46,6 +48,8 @@ public class ConfigUtil {
             JsonObject object = new JsonObject();
             object.addProperty("f5", AutoGG.getInstance().isF5());
             object.addProperty("length", AutoGG.getInstance().getLength());
+            object.addProperty("chroma", AutoGG.getInstance().isChroma());
+
             object.addProperty("toggled", AutoGG.getInstance().isToggled());
             bw.write(object.toString());
             bw.close();
