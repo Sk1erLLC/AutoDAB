@@ -27,10 +27,10 @@ public class ConfigUtil {
                 }
                 String s = builder.toString();
                 JsonObject asJsonObject = new JsonParser().parse(s).getAsJsonObject();
-                AutoGG.getInstance().setLength(asJsonObject.get("length").getAsInt());
-                AutoGG.getInstance().setF5(asJsonObject.get("f5").getAsBoolean());
-                AutoGG.getInstance().setToggled(asJsonObject.get("toggled").getAsBoolean());
-                AutoGG.getInstance().toggleChroma(asJsonObject.get("chroma").getAsBoolean());
+                AutoGG.getInstance().setLength(asJsonObject.has("length") ? asJsonObject.get("length").getAsInt() : 5);
+                AutoGG.getInstance().setF5(asJsonObject.has("f5") && asJsonObject.get("f5").getAsBoolean());
+                AutoGG.getInstance().setToggled(asJsonObject.has("toggled") && asJsonObject.get("toggled").getAsBoolean());
+                AutoGG.getInstance().toggleChroma(asJsonObject.has("chroma") && asJsonObject.get("chroma").getAsBoolean());
 
             } catch (Exception e) {
 
