@@ -1,5 +1,5 @@
 ## What it does
-The AutoDAB 1.0 Mod was assemebed by Sk1er. This mod makes users automatically dab upon willing a game on Hypixel. 
+The AutoDAB 1.1 Mod was assemebed by Sk1er. This mod makes users automatically dab upon willing a game on Hypixel. 
 
 ## Requirements 
 AutoDAB 1.0 requires [RenderPlayerAPI](https://2pi.pw/dl/RenderPlayerAPI-1.8.9-1.0.jar)
@@ -11,6 +11,8 @@ AutoDAB 1.0 requires [RenderPlayerAPI](https://2pi.pw/dl/RenderPlayerAPI-1.8.9-1
 `/autodab f5` - Toggle automatic enter and leaving of f5 mode when the mod dabs
 
 `/autodab length [seconds]` - Time in seconds mods will dab for
+
+`/autodab chroma ` - Toggle Chroma on dab 
 
 In game controls, you may change the value of the hotkey to dab. While the button is pressed, the user will dab.
 
