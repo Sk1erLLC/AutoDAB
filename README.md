@@ -5,6 +5,8 @@ The AutoDAB 1.1 Mod was assemebed by Sk1er. This mod makes users automatically d
 AutoDAB 1.0 requires [RenderPlayerAPI](https://2pi.pw/dl/RenderPlayerAPI-1.8.9-1.0.jar)
 
 **If you use a 1.7 animations mod, you must disable anything that overrides f5 animations for this mod to work. If you use Orangemarshall's 1.7 animations mod, disable "3rd person sword block postion" in /animationsconfig and press save**
+
+**For the Chroma feature to work, fast render must be disabled in Optifine. Video Settings -> Fast Render -> Off**
 ## Config Settings
 `/autodab toggle` - Toggles the mod
 
