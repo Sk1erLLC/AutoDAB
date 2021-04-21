@@ -1,10 +1,10 @@
 ## What it does
-The AutoDAB 1.1 Mod was assemebed by Sk1er. This mod makes users automatically dab upon willing a game on Hypixel. 
+The AutoDAB 1.1 Mod was assembled by Sk1er. This mod makes users automatically dab upon winning a game on Hypixel. 
 
 ## Requirements 
 AutoDAB 1.0 requires [RenderPlayerAPI](https://2pi.pw/dl/RenderPlayerAPI-1.8.9-1.0.jar)
 
-**If you use a 1.7 animations mod, you must disable anything that overrides f5 animations for this mod to work. If you use Orangemarshall's 1.7 animations mod, disable "3rd person sword block postion" in /animationsconfig and press save**
+**If you use a 1.7 animations mod, you must disable anything that overrides f5 animations for this mod to work. If you use Orangemarshall's 1.7 animations mod, disable "3rd person sword block position" in /animationsconfig and press save**
 
 **For the Chroma feature to work, fast render must be disabled in Optifine. Video Settings -> Fast Render -> Off**
 ## Config Settings
@@ -12,7 +12,7 @@ AutoDAB 1.0 requires [RenderPlayerAPI](https://2pi.pw/dl/RenderPlayerAPI-1.8.9-1
 
 `/autodab f5` - Toggle automatic enter and leaving of f5 mode when the mod dabs
 
-`/autodab length [seconds]` - Time in seconds mods will dab for
+`/autodab length [seconds]` - Time in seconds in which the mod will dab for
 
 `/autodab chroma ` - Toggle Chroma on dab 
 
